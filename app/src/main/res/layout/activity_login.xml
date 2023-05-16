@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".LoginActivity">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="250dp"
+                android:padding="15dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/lg_email"
+                    android:background="@drawable/forma_botones"
+                    android:layout_marginTop="30dp"
+                    android:padding="8dp"
+                    android:hint="Correo"
+                    android:drawableLeft="@drawable/email_logo"
+                    android:drawablePadding="8dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/lg_password"
+                    android:background="@drawable/forma_botones"
+                    android:layout_marginTop="30dp"
+                    android:padding="8dp"
+                    android:hint="Contraseña"
+                    android:drawableLeft="@drawable/baseline_lock_24"
+                    android:drawablePadding="8dp"/>
+
+
+
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/lg_boton"
+                    android:text="Iniciar Sesión"
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sigupRedirect"
+                    android:text="¿No estas registrado? Registrate"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

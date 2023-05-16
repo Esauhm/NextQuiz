@@ -10,12 +10,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class settingsActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, settings;
+    LinearLayout home, settings, logout;
 
 
     @Override
@@ -27,6 +28,7 @@ public class settingsActivity extends AppCompatActivity {
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
         settings = findViewById(R.id.settings);
+        logout = findViewById(R.id.logOut);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +49,17 @@ public class settingsActivity extends AppCompatActivity {
                 recreate();
             }
         });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(settingsActivity.this, LoginActivity.class);
+                Toast.makeText(settingsActivity.this, "Sesion cerrada correctamente", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
     }
 
     public static void openDrawer(DrawerLayout drawerLayout){
