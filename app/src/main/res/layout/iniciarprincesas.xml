@@ -21,13 +21,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/lg_password"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:padding="8dp"
+                android:hint="¿Deseas descubrir que princesa eres?"
+                android:drawablePadding="8dp"/>
 
             <ImageView
                 android:id="@+id/imagen1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@drawable/dbz"
+                android:src="@drawable/princesas"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:padding="8dp" />
@@ -36,26 +45,10 @@
                 android:id="@+id/boton1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jugar"
+                android:text="iniciar"
                 android:layout_marginTop="8dp" />
 
-            <ImageView
-                android:id="@+id/imagen2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/princesas"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:padding="8dp"
-                android:layout_marginTop="16dp" />
 
-            <Button
-                android:id="@+id/boton2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Jugar"
-                android:layout_marginTop="8dp" />
 
         </LinearLayout>
 
