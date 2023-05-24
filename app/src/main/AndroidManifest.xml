@@ -13,6 +13,12 @@
         android:theme="@style/Theme.NextQuiz"
         tools:targetApi="31">
         <activity
+            android:name=".PreguntaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultadoActivity"
+            android:exported="false" />
+        <activity
             android:name=".sigupActivity"
             android:exported="false" />
         <activity

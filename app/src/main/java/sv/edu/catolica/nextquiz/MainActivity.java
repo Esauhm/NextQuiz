@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, settings, logout;
+    Button boton1, boton2;
 
 
     @Override
@@ -56,7 +58,32 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Sesion cerrada correctamente", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        boton1 = findViewById(R.id.boton1);
+        boton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  intent = new Intent(MainActivity.this, PreguntaActivity.class);
+                intent.putExtra("set", "Questionario1");
+                startActivity(intent);
+            }
+        });
+
+        boton2 = findViewById(R.id.boton2);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  intent = new Intent(MainActivity.this, PreguntaActivity.class);
+                intent.putExtra("set", "Questionario2");
+                startActivity(intent);
+            }
+        });
+
+
     }
+
+
 
     public static void openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);
