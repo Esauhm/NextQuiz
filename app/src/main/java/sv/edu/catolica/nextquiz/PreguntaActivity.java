@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.animation.Animator;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -21,7 +23,7 @@ public class PreguntaActivity extends AppCompatActivity {
     private ConstraintLayout optionContainer;
     private Button btnNext;
 
-    TextView question, totalQuestion;
+    TextView question, totalQuestion, Ettimer;
 
     ArrayList<QuestionModel> list = new ArrayList<>();
 
@@ -42,6 +44,10 @@ public class PreguntaActivity extends AppCompatActivity {
         btnNext = findViewById(R.id.btnNext);
         question = findViewById(R.id.question);
         totalQuestion = findViewById(R.id.totalQuestion);
+        Ettimer = findViewById(R.id.timer);
+
+        resetTimer();
+        timer.start();
 
         String setName = getIntent().getStringExtra("set");
 
@@ -50,6 +56,7 @@ public class PreguntaActivity extends AppCompatActivity {
         } else if (setName.equals("Questionario2")){
             setTwo();
         }
+
 
         for(int i = 0; i<4; i++){
             optionContainer.getChildAt(i).setOnClickListener(new View.OnClickListener() {
@@ -65,6 +72,12 @@ public class PreguntaActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(timer != null){
+                    timer.cancel();
+                }
+
+                timer.start();
                 btnNext.setEnabled(false);
                 btnNext.setAlpha((float) 0.3);
                 enableOption(true);
@@ -90,6 +103,34 @@ public class PreguntaActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void resetTimer() {
+        timer = new CountDownTimer(30000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Ettimer.setText(String.valueOf(millisUntilFinished/1000));
+            }
+
+            @Override
+            public void onFinish() {
+                Dialog dialog = new Dialog(PreguntaActivity.this);
+                dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+                dialog.setCancelable(false);
+                dialog.setContentView(R.layout.tiempo_dialog);
+                dialog.findViewById(R.id.btn_tiempo_fin).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(PreguntaActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+
+                dialog.show();
+
+            }
+        };
     }
 
     private void playAnimation(TextView question, int value, String data) {
@@ -158,13 +199,24 @@ public class PreguntaActivity extends AppCompatActivity {
     private void enableOption(boolean enable) {
         for (int i=0; i<4; i++){
             optionContainer.getChildAt(i).setEnabled(enable);
+
+            if(enable){
+                optionContainer.getChildAt(i).setBackgroundResource(R.drawable.btn_continuar);
+            }
         }
 
 
     }
 
     private void RevisarRespuesta(Button opcionSeleccionada) {
+        if(timer != null){
+            timer.cancel();
+        }
+
         btnNext.setEnabled(true);
+        btnNext.setAlpha(1);
+
+        opcionSeleccionada.setBackgroundResource(R.drawable.btn_seleccionado);
     }
 
     private void setTwo() {
