@@ -15,6 +15,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -86,7 +87,7 @@ public class PreguntaActivity extends AppCompatActivity {
                 if(position == list.size()){
                     //Aqui vamos a mandar un codigo de puntaje para el otro lado solo mostrar la imagen
                     Intent intent = new Intent(PreguntaActivity.this, ResultadoActivity.class);
-                    //intent.putExtra()
+                    intent.putExtra("src", score);
                     startActivity(intent);
                     finish();
                     return;
@@ -217,12 +218,18 @@ public class PreguntaActivity extends AppCompatActivity {
         btnNext.setAlpha(1);
 
         opcionSeleccionada.setBackgroundResource(R.drawable.btn_seleccionado);
+
+        if(opcionSeleccionada.getText().toString().equals(list.get(position).getOptionA())){
+            score += 1;
+        }
     }
 
     private void setTwo() {
 
         list.add(new QuestionModel("Preguntas cuationario 2 Quien es mas alto?", "1", "2", "3", "4"));
         list.add(new QuestionModel(" Preguntas cuationario 2 Quien es mas gordo?", "5", "6", "7", "8"));
+        list.add(new QuestionModel("Preguntas cuationario 2 Quien es mas alto?", "10", "2", "3", "4"));
+        list.add(new QuestionModel(" Preguntas cuationario 2 Quien es mas gordo?", "11", "6", "7", "8"));
     }
 
     private void setOne() {
