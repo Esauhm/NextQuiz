@@ -36,6 +36,9 @@ public class PreguntaActivity extends AppCompatActivity {
 
     CountDownTimer timer;
 
+    String setName;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +53,7 @@ public class PreguntaActivity extends AppCompatActivity {
         resetTimer();
         timer.start();
 
-        String setName = getIntent().getStringExtra("set");
+        setName = getIntent().getStringExtra("set");
 
         if(setName.equals("Questionario1")){
             setOne();
@@ -88,6 +91,7 @@ public class PreguntaActivity extends AppCompatActivity {
                     //Aqui vamos a mandar un codigo de puntaje para el otro lado solo mostrar la imagen
                     Intent intent = new Intent(PreguntaActivity.this, ResultadoActivity.class);
                     intent.putExtra("src", score);
+                    intent.putExtra("cst", setName);
                     startActivity(intent);
                     finish();
                     return;
@@ -202,7 +206,7 @@ public class PreguntaActivity extends AppCompatActivity {
             optionContainer.getChildAt(i).setEnabled(enable);
 
             if(enable){
-                optionContainer.getChildAt(i).setBackgroundResource(R.drawable.btn_continuar);
+                optionContainer.getChildAt(i).setBackgroundResource(R.drawable.btn_questions);
             }
         }
 
@@ -221,6 +225,12 @@ public class PreguntaActivity extends AppCompatActivity {
 
         if(opcionSeleccionada.getText().toString().equals(list.get(position).getOptionA())){
             score += 1;
+        } else if (opcionSeleccionada.getText().toString().equals(list.get(position).getOptionB())){
+            score += 2;
+        } else if (opcionSeleccionada.getText().toString().equals(list.get(position).getOptionC())){
+            score += 3;
+        } else if (opcionSeleccionada.getText().toString().equals(list.get(position).getOptionD())){
+            score += 4;
         }
     }
 
