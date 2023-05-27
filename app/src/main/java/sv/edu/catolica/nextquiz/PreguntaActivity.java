@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
@@ -23,7 +24,6 @@ public class PreguntaActivity extends AppCompatActivity {
 
     private ConstraintLayout optionContainer;
     private Button btnNext;
-
     TextView question, totalQuestion, Ettimer;
 
     ArrayList<QuestionModel> list = new ArrayList<>();
@@ -33,6 +33,7 @@ public class PreguntaActivity extends AppCompatActivity {
     private int position = 0;
 
     private int score = 0;
+    private int acumulador = 0;
 
     CountDownTimer timer;
 
@@ -50,6 +51,8 @@ public class PreguntaActivity extends AppCompatActivity {
         totalQuestion = findViewById(R.id.totalQuestion);
         Ettimer = findViewById(R.id.timer);
 
+
+
         resetTimer();
         timer.start();
 
@@ -63,10 +66,13 @@ public class PreguntaActivity extends AppCompatActivity {
 
 
         for(int i = 0; i<4; i++){
+            acumulador=0;
+
             optionContainer.getChildAt(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    RevisarRespuesta((Button) v);
+                  acumulador =  RevisarRespuesta((Button) v);
+
                 }
             });
         }
@@ -87,14 +93,19 @@ public class PreguntaActivity extends AppCompatActivity {
                 enableOption(true);
                 position++;
 
+                score += acumulador;
+
+
                 if(position == list.size()){
                     //Aqui vamos a mandar un codigo de puntaje para el otro lado solo mostrar la imagen
                     Intent intent = new Intent(PreguntaActivity.this, ResultadoActivity.class);
                     intent.putExtra("src", score);
                     intent.putExtra("cst", setName);
                     startActivity(intent);
+                    timer.cancel();
                     finish();
                     return;
+
 
                 }
 
@@ -117,6 +128,7 @@ public class PreguntaActivity extends AppCompatActivity {
                 Ettimer.setText(String.valueOf(millisUntilFinished/1000));
             }
 
+
             @Override
             public void onFinish() {
                 Dialog dialog = new Dialog(PreguntaActivity.this);
@@ -131,9 +143,7 @@ public class PreguntaActivity extends AppCompatActivity {
                         finish();
                     }
                 });
-
                 dialog.show();
-
             }
         };
     }
@@ -213,25 +223,34 @@ public class PreguntaActivity extends AppCompatActivity {
 
     }
 
-    private void RevisarRespuesta(Button opcionSeleccionada) {
+    private Button botonSeleccionado;
+    private int RevisarRespuesta(Button opcionSeleccionada) {
+        int puntos=0;
         if(timer != null){
             timer.cancel();
         }
 
+
+        if (botonSeleccionado != null && botonSeleccionado != opcionSeleccionada) {
+            botonSeleccionado.setBackgroundResource(R.drawable.btn_questions);
+        }
+
+        opcionSeleccionada.setBackgroundResource(R.drawable.btn_seleccionado);
+        botonSeleccionado = opcionSeleccionada;
+
         btnNext.setEnabled(true);
         btnNext.setAlpha(1);
 
-        opcionSeleccionada.setBackgroundResource(R.drawable.btn_seleccionado);
-
         if(opcionSeleccionada.getText().toString().equals(list.get(position).getOptionA())){
-            score += 1;
+            puntos = 1;
         } else if (opcionSeleccionada.getText().toString().equals(list.get(position).getOptionB())){
-            score += 2;
+            puntos = 2;
         } else if (opcionSeleccionada.getText().toString().equals(list.get(position).getOptionC())){
-            score += 3;
+            puntos = 3;
         } else if (opcionSeleccionada.getText().toString().equals(list.get(position).getOptionD())){
-            score += 4;
+            puntos = 4;
         }
+        return puntos;
     }
 
     private void setTwo() {
