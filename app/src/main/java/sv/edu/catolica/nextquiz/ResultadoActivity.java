@@ -2,16 +2,24 @@ package sv.edu.catolica.nextquiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class ResultadoActivity extends AppCompatActivity {
 
 
     private ImageView imagen, imagen2;
+
+    Drawable drawable;
+
+    int valorImg = 0;
 
 
 
@@ -24,13 +32,29 @@ public class ResultadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
+        int totalscore = getIntent().getIntExtra("src", 0);
+        String Cuestionario = getIntent().getStringExtra("cst");
+
         imagen = findViewById(R.id.blueTwitter);
         imagen2 = findViewById(R.id.whiteTwitter);
 
+        TimerTask tarea = new TimerTask() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(ResultadoActivity.this, DescripcionActivity.class);
+                intent.putExtra("cst", Cuestionario);
+                intent.putExtra("img", valorImg);
+                startActivity(intent);
+                finish();
+            }
+        };
+
+        Timer tiempo = new Timer();
+        tiempo.schedule(tarea, 4000);
 
 
-        int totalscore = getIntent().getIntExtra("src", 0);
-        String Cuestionario = getIntent().getStringExtra("cst");
+
+
 
 
         try {
@@ -39,10 +63,16 @@ public class ResultadoActivity extends AppCompatActivity {
                 case "Questionario1":
                     if (totalscore >= 0 && totalscore <= 13) {
                         // Cargar la imagen desde el código
-                        Drawable drawable = getResources().getDrawable(R.drawable.d2);
+                        drawable = getResources().getDrawable(R.drawable.d2);
                         imagen.setImageDrawable(drawable);
                         Drawable drawable2 = getResources().getDrawable(R.drawable.d2);
                         imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+
+                        valorImg = 1;
+
+
                     } else if (totalscore >= 14 && totalscore <= 16) {
                         //imagen =
                     } else if (totalscore >= 17 && totalscore <= 19) {

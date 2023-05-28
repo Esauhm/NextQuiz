@@ -6,7 +6,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="2000"
+        motion:duration="3000"
         motion:autoTransition="animateToEnd">
         <KeyFrameSet>
         </KeyFrameSet>
@@ -26,14 +26,16 @@
         <Constraint
             android:id="@+id/blueTwitter"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="318dp"
+            android:layout_height="468dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:scaleX="0"
             android:scaleY="0"
-            android:alpha="0" />
+            android:alpha="0"
+            motion:layout_editor_absoluteX="52dp"
+            motion:layout_editor_absoluteY="91dp" />
         <Constraint
             android:id="@+id/whiteTwitter"
             motion:layout_constraintEnd_toEndOf="parent"

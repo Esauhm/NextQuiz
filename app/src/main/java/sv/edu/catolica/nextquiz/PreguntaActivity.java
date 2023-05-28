@@ -34,6 +34,8 @@ public class PreguntaActivity extends AppCompatActivity {
     private int score = 0;
     private int acumulador = 0;
 
+    private LinearLayout principal;
+
     CountDownTimer timer;
 
     String setName;
@@ -49,6 +51,7 @@ public class PreguntaActivity extends AppCompatActivity {
         question = findViewById(R.id.question);
         totalQuestion = findViewById(R.id.totalQuestion);
         Ettimer = findViewById(R.id.timer);
+        principal = findViewById(R.id.lLprincipal);
 
 
 
@@ -58,6 +61,7 @@ public class PreguntaActivity extends AppCompatActivity {
         setName = getIntent().getStringExtra("set");
 
         if(setName.equals("Questionario1")){
+            //principal.setBackgroundResource(R.drawable.fondop_img);
             setOne();
         } else if (setName.equals("Questionario2")){
             setTwo();

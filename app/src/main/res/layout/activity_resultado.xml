@@ -10,9 +10,7 @@
     tools:context=".ResultadoActivity">
 
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/toolbar" />
+
 
 
 
