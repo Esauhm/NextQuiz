@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, settings, logout;
-    Button boton1, boton2;
+    LinearLayout home, nosotros, nuevos, logout;
+    Button boton1, boton2, boton3, boton4;
 
 
     @Override
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
-        settings = findViewById(R.id.settings);
+        nosotros = findViewById(R.id.nosotros);
+        nuevos = findViewById(R.id.nuevos);
         logout = findViewById(R.id.logOut);
 
         menu.setOnClickListener(new View.OnClickListener() {
@@ -44,10 +45,17 @@ public class MainActivity extends AppCompatActivity {
                 recreate();
             }
         });
-        settings.setOnClickListener(new View.OnClickListener() {
+        nosotros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 redirectActivity(MainActivity.this, settingsActivity.class);
+            }
+        });
+
+        nuevos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(MainActivity.this, nuevosActivity.class);
             }
         });
 
@@ -76,6 +84,28 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent  intent = new Intent(MainActivity.this, PreguntaActivity.class);
                 intent.putExtra("set", "Questionario2");
+                startActivity(intent);
+            }
+        });
+
+        boton3= findViewById(R.id.boton3);
+
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  intent = new Intent(MainActivity.this, PreguntaActivity.class);
+                intent.putExtra("set", "Questionario3");
+                startActivity(intent);
+            }
+        });
+
+        boton4 = findViewById(R.id.boton4);
+
+        boton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  intent = new Intent(MainActivity.this, PreguntaActivity.class);
+                intent.putExtra("set", "Questionario4");
                 startActivity(intent);
             }
         });

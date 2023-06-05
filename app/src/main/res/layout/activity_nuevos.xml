@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerlayout"
-    tools:context=".MainActivity">
+    tools:context=".nuevosActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,22 +30,42 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/titulo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/imagen1"
+                        android:text="Futuros Quiz"
+                        android:textColor="@color/lavender"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:padding="8dp" />
+
                     <ImageView
                         android:id="@+id/imagen1"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:src="@drawable/dbz"
+                        android:src="@drawable/panes_img"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:padding="8dp"
-                        android:contentDescription="@string/ctd_dragon" />
+                        android:contentDescription="@string/next_paness" />
 
-                    <Button
-                        android:id="@+id/boton1"
+
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btn1_main"
+                        android:text="@string/quiz_panes"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descripcion_panes"
                         android:layout_marginTop="8dp" />
 
                     <ImageView
@@ -54,18 +73,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:src="@drawable/unicornio_img"
+                        android:src="@drawable/frutass_img"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:padding="8dp"
                         android:layout_marginTop="16dp"
-                        android:contentDescription="@string/cnt_unicornios" />
+                        android:contentDescription="@string/nextt_frutas" />
 
-                    <Button
-                        android:id="@+id/boton2"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btn2_main"
+                        android:text="@string/text_frutas"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/next_frutas"
                         android:layout_marginTop="8dp" />
 
                     <ImageView
@@ -73,38 +98,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:src="@drawable/princesas"
+                        android:src="@drawable/animales_img"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:padding="8dp"
                         android:layout_marginTop="16dp"
-                        android:contentDescription="@string/cnt_princesa" />
+                        android:contentDescription="@string/next_aniamales" />
 
-                    <Button
-                        android:id="@+id/boton3"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btn2_main"
+                        android:text="@string/text_aninales"
+                        android:textStyle="bold"
                         android:layout_marginTop="8dp" />
 
-                    <ImageView
-                        android:id="@+id/imagen4"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/comida_img"
-                        android:scaleType="fitCenter"
-                        android:adjustViewBounds="true"
-                        android:padding="8dp"
-                        android:layout_marginTop="16dp"
-                        android:contentDescription="@string/cnt_comida" />
-
-                    <Button
-                        android:id="@+id/boton4"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btn2_main"
+                        android:text="@string/descricion_animales"
                         android:layout_marginTop="8dp" />
+
+
 
                 </LinearLayout>
 

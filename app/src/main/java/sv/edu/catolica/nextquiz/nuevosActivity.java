@@ -12,17 +12,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class settingsActivity extends AppCompatActivity {
+public class nuevosActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, nosotros, nuevos, logout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_nuevos);
 
         drawerLayout = findViewById(R.id.drawerlayout);
         menu = findViewById(R.id.menu);
@@ -37,32 +36,33 @@ public class settingsActivity extends AppCompatActivity {
                 openDrawer(drawerLayout);
             }
         });
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                redirectActivity(settingsActivity.this, MainActivity.class);
+                redirectActivity(nuevosActivity.this, MainActivity.class);
             }
         });
         nosotros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recreate();
+                redirectActivity(nuevosActivity.this, settingsActivity.class);
             }
         });
 
         nuevos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(settingsActivity.this, nuevosActivity.class);
+                recreate();
             }
         });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(settingsActivity.this, LoginActivity.class);
-                Toast.makeText(settingsActivity.this, "Sesion cerrada correctamente", Toast.LENGTH_SHORT).show();
+                redirectActivity(nuevosActivity.this, LoginActivity.class);
+                Toast.makeText(nuevosActivity.this, "Sesion cerrada correctamente", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -95,4 +95,5 @@ public class settingsActivity extends AppCompatActivity {
         super.onPause();
         closeDrawer(drawerLayout);
     }
+
 }

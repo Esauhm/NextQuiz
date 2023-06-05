@@ -8,4 +8,20 @@
     <string name="txt_redirect_inicio">¿Ya tiene un usuario? Inicia Sessión</string>
     <string name="et_contrasenia">Contraseña</string>
     <string name="btn_registrarte">Registrate</string>
+    <string name="ctd_dragon">Imagen para cuestionario de Dragon ball</string>
+    <string name="btn1_main">Jugar</string>
+    <string name="btn2_main">Jugar</string>
+    <string name="cnt_comida">imagen de cuestionario de comida</string>
+    <string name="cnt_princesa">Imagen de cuestionario de princesa</string>
+    <string name="cnt_unicornios">Imagen de cuestionario de unicornios</string>
+    <string name="txt_cerrar_sesion">Cerrar Sesion</string>
+    <string name="next_aniamales">imagen del proximo cuestionario de aniamles</string>
+    <string name="next_frutas">En este Quiz podrás contestar a preguntas que divertidas y que te harán pensar para descubrir que fruta eres, diviertete.</string>
+    <string name="nextt_frutas">imagen del proximo cuestionario de frutas</string>
+    <string name="next_paness">imagen del proximo cuestionario de panes</string>
+    <string name="quiz_panes">Quiz de Panes:</string>
+    <string name="descripcion_panes">En este Quiz podras responder preguntas divertidas y saber que tipo de pan eres en la vida.</string>
+    <string name="text_frutas">Quiz de Frutas:</string>
+    <string name="text_aninales">Quiz de Animales:</string>
+    <string name="descricion_animales">En este Quiz podrás responder preguntas divertidas y saber que tipo de animal eres, podrías ser un perrito o un gato, no lo sabrás hasta jugarlo, continua jugando en nextQuiz.</string>
 </resources>

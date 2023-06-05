@@ -63,45 +63,124 @@ public class ResultadoActivity extends AppCompatActivity {
                 case "Questionario1":
                     if (totalscore >= 0 && totalscore <= 13) {
                         // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d1);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d1);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 1;
+
+
+                    } else if (totalscore >= 14 && totalscore <= 16) {
+
+                        // Cargar la imagen desde el código
                         drawable = getResources().getDrawable(R.drawable.d2);
                         imagen.setImageDrawable(drawable);
                         Drawable drawable2 = getResources().getDrawable(R.drawable.d2);
                         imagen2.setImageDrawable(drawable2);
 
                         //guardar la imagen
+                        valorImg = 2;
 
-                        valorImg = 1;
-
-
-                    } else if (totalscore >= 14 && totalscore <= 16) {
-                        //imagen =
                     } else if (totalscore >= 17 && totalscore <= 19) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d3);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d3);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 3;
                     } else if (totalscore >= 20 && totalscore <= 22) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d4);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d4);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 4;
                     } else if (totalscore >= 23 && totalscore <= 25) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d5);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d5);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 5;
                     } else if (totalscore >= 26 && totalscore <= 28) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d6);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d6);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 6;
                     } else if (totalscore >= 29 && totalscore <= 32) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d7);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d7);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 7;
                     } else if (totalscore >= 33 && totalscore <= 35) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d8);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d8);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 8;
                     } else if (totalscore >= 36 && totalscore <= 38) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d9);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d9);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 9;
                     } else if (totalscore >= 39 && totalscore <= 40) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.d10);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.d10);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 10;
                     } else {
                         System.out.println("Respuesta fuera de rango");
                     }
                     break;
 
+
                 //Cuestionario 2
                 case "Questionario2":
                     if (totalscore >= 10 && totalscore <= 13) {
-                        System.out.println("Respuesta dentro del rango 1-3");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p1);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p1);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 1;
                     } else if (totalscore >= 14 && totalscore <= 16) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p2);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p2);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 2;
                     } else if (totalscore >= 17 && totalscore <= 19) {
                         System.out.println("Respuesta dentro del rango 7-9");
                     } else if (totalscore >= 20 && totalscore <= 22) {
@@ -120,6 +199,201 @@ public class ResultadoActivity extends AppCompatActivity {
                         System.out.println("Respuesta dentro del rango 4-6");
                     } else {
                         System.out.println("Respuesta fuera de rangos");
+                    }
+                    break;
+
+
+                //Cuestionario 3
+                case "Questionario3":
+                    if (totalscore >= 10 && totalscore <= 13) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p1);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p1);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 1;
+                    } else if (totalscore >= 14 && totalscore <= 16) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p2);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p2);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 2;
+                    } else if (totalscore >= 17 && totalscore <= 19) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p3);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p3);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 3;
+                    } else if (totalscore >= 20 && totalscore <= 22) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p4);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p4);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 4;
+                    } else if (totalscore >= 23 && totalscore <= 25) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p5);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p5);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 5;
+                    } else if (totalscore >= 26 && totalscore <= 28) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p6);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p6);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 6;
+                    } else if (totalscore >= 29 && totalscore <= 32) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p7);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p7);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 7;
+                    } else if (totalscore >= 33 && totalscore <= 35) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p8);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p8);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 8;
+                    } else if (totalscore >= 36 && totalscore <= 38) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p9);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p9);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 9;
+                    } else if (totalscore >= 39 && totalscore <= 40) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.p10);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.p10);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 10;
+                    } else {
+                        System.out.println("Respuesta fuera de rangoss");
+                    }
+                    break;
+
+                //Cuestionario 4
+                case "Questionario4":
+                    if (totalscore >= 10 && totalscore <= 13) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c1);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c1);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 1;
+                    } else if (totalscore >= 14 && totalscore <= 16) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c2);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c2);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 2;
+                    } else if (totalscore >= 17 && totalscore <= 19) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c3);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c3);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 3;
+                    } else if (totalscore >= 20 && totalscore <= 22) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c4);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c4);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 4;
+                    } else if (totalscore >= 23 && totalscore <= 25) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c5);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c5);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 5;
+                    } else if (totalscore >= 26 && totalscore <= 28) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c6);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c6);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 6;
+                    } else if (totalscore >= 29 && totalscore <= 32) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c7);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c7);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 7;
+                    } else if (totalscore >= 33 && totalscore <= 35) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c8);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c8);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 8;
+                    } else if (totalscore >= 36 && totalscore <= 38) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c9);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c9);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 9;
+                    } else if (totalscore >= 39 && totalscore <= 40) {
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.c10);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c10);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 10;
+                    } else {
+                        System.out.println("Respuestas fuera de rangos");
                     }
                     break;
             }

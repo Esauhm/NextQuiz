@@ -16,14 +16,6 @@
         <include
             layout="@layout/toolbar"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Settings"
-            android:layout_gravity="center"
-            android:layout_marginTop="400dp"
-            android:textSize="36dp"/>
-
     </LinearLayout>
 
 
@@ -37,5 +29,7 @@
             layout="@layout/nav_drawer"/>
 
     </RelativeLayout>
+
+    
 
 </androidx.drawerlayout.widget.DrawerLayout>

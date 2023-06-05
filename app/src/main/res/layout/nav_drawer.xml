@@ -17,9 +17,10 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/aklogo"/>
+            android:src="@drawable/nextquiz1"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,6 +38,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/home"
         android:layout_marginStart="12dp"
+        android:paddingTop="25dp"
         android:layout_marginTop="12dp"
         android:orientation="horizontal">
 
@@ -44,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/lavender"
-            android:text="home"
+            android:text="Inicio"
             android:textSize="20sp"
             android:drawableLeft="@drawable/baseline_home_24"
             android:drawablePadding="8dp"/>
@@ -54,7 +56,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/share"
+        android:id="@+id/nosotros"
+        android:paddingTop="15dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:orientation="horizontal">
@@ -63,9 +66,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/lavender"
-            android:text="share"
+            android:text="Sobre nosotros"
             android:textSize="20sp"
-            android:drawableLeft="@drawable/baseline_home_24"
+            android:drawableLeft="@drawable/libro"
             android:drawablePadding="8dp"/>
 
     </LinearLayout>
@@ -73,7 +76,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/settings"
+        android:id="@+id/nuevos"
+        android:paddingTop="15dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:orientation="horizontal">
@@ -82,36 +86,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/lavender"
-            android:text="settings"
+            android:text="Proximos  Questionarios"
             android:textSize="20sp"
-            android:drawableLeft="@drawable/baseline_home_24"
+            android:drawableLeft="@drawable/nuevos"
             android:drawablePadding="8dp"/>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/about"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/lavender"
-            android:text="Abput us"
-            android:textSize="20sp"
-            android:drawableLeft="@drawable/baseline_home_24"
-            android:drawablePadding="8dp"/>
-
-    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="40dp"
         android:background="@color/lavender"/>
 
     <LinearLayout
@@ -126,9 +113,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/lavender"
-            android:text="Cerrar Sesion"
+            android:text="@string/txt_cerrar_sesion"
+            android:paddingTop="15dp"
             android:textSize="20sp"
-            android:drawableLeft="@drawable/baseline_home_24"
+            android:drawableLeft="@drawable/herramienta"
             android:drawablePadding="8dp"/>
 
     </LinearLayout>
