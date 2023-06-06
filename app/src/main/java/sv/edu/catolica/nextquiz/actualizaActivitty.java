@@ -17,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class actualizaActivitty extends AppCompatActivity {
 
     LinearLayout home, nosotros, nuevos, logout,perfil;
@@ -26,6 +29,10 @@ public class actualizaActivitty extends AppCompatActivity {
     Button btnActualiza;
     String correo;
     DatabaseHelper bd;
+
+    String emailPattern = "^\\w+([.-]?\\w+)*@\\w+([.-]?\\w+)*(\\.\\w{2,})+$";
+
+    Pattern pattern = Pattern.compile(emailPattern);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,35 +184,45 @@ public class actualizaActivitty extends AppCompatActivity {
         String pass2 = confirma.getText().toString().trim();
 
        String valida =  editaCorreo.getHint().toString().trim();
-        if (correoN.isEmpty() || pass1.isEmpty() || pass2.isEmpty()) {
 
-            Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
-        }else{
-            switch (valida) {
-                case "Nuevo correo electrónico":
-                    bd.updateEmail(correo,correoN,pass1,pass2);
-                    this.limpia();
-                    break;
-                case "Nueva Contraseña":
-                    bd.updatePassword(correo,correoN,pass1,pass2);
-                    this.limpia();
+        Matcher matcher = pattern.matcher(correoN);
 
-                    break;
-                case "Nueva palabra clave":
-                    bd.updateKeyword(correo,correoN,pass1,pass2);
-                    this.limpia();
-                    break;
+        if (matcher.matches()) {
+
+            if (correoN.isEmpty() || pass1.isEmpty() || pass2.isEmpty()) {
+
+                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
+            }else {
+                switch (valida) {
+                    case "Nuevo correo electrónico":
+                        bd.updateEmail(correo, correoN, pass1, pass2);
+                        this.limpia();
+                        break;
+                    case "Nueva Contraseña":
+                        bd.updatePassword(correo, correoN, pass1, pass2);
+                        this.limpia();
+
+                        break;
+                    case "Nueva palabra clave":
+                        bd.updateKeyword(correo, correoN, pass1, pass2);
+                        this.limpia();
+                        break;
+                }
+                Toast.makeText(this, "Se ha actualizado la información con éxito", Toast.LENGTH_SHORT).show();
+                // Guardar el correo electrónico del usuario en SharedPreferences
+                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("email", correoN);
+                editor.apply();
+                redirectActivity(actualizaActivitty.this, perfilActivity.class);
             }
-            Toast.makeText(this, "Se ha actualizado la información con éxito", Toast.LENGTH_SHORT).show();
-            // Guardar el correo electrónico del usuario en SharedPreferences
-            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("email", correoN);
-            editor.apply();
-            redirectActivity(actualizaActivitty.this,perfilActivity.class);
+        } else {
+            Toast.makeText(actualizaActivitty.this, "El formato del correo no es correcto", Toast.LENGTH_SHORT).show();
         }
 
+
     }
+
     public  void limpia(){
             editaCorreo.setText("");
         editaContra.setText("");
