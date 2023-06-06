@@ -26,6 +26,7 @@ public class actualizaActivitty extends AppCompatActivity {
     Button btnActualiza;
     String correo;
     DatabaseHelper bd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +79,7 @@ public class actualizaActivitty extends AppCompatActivity {
         perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recreate();
+                redirectActivity(actualizaActivitty.this, perfilActivity.class);
             }
         });
         nuevos.setOnClickListener(new View.OnClickListener() {
@@ -176,22 +177,34 @@ public class actualizaActivitty extends AppCompatActivity {
         String pass2 = confirma.getText().toString().trim();
 
        String valida =  editaCorreo.getHint().toString().trim();
-        switch (valida) {
-            case "Nuevo correo electrónico":
+        if (correoN.isEmpty() || pass1.isEmpty() || pass2.isEmpty()) {
+
+            Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
+        }else{
+            switch (valida) {
+                case "Nuevo correo electrónico":
                     bd.updateEmail(correo,correoN,pass1,pass2);
                     this.limpia();
-                break;
-            case "Nueva Contraseña":
+                    break;
+                case "Nueva Contraseña":
                     bd.updatePassword(correo,correoN,pass1,pass2);
-                this.limpia();
+                    this.limpia();
 
-                break;
-            case "Nueva palabra clave":
-                bd.updateKeyword(correo,correoN,pass1,pass2);
-                this.limpia();
-
-                break;
+                    break;
+                case "Nueva palabra clave":
+                    bd.updateKeyword(correo,correoN,pass1,pass2);
+                    this.limpia();
+                    break;
+            }
+            Toast.makeText(this, "Se ha actualizado la información con éxito", Toast.LENGTH_SHORT).show();
+            // Guardar el correo electrónico del usuario en SharedPreferences
+            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("email", correoN);
+            editor.apply();
+            redirectActivity(actualizaActivitty.this,perfilActivity.class);
         }
+
     }
     public  void limpia(){
             editaCorreo.setText("");
