@@ -59,18 +59,18 @@
                     android:drawablePadding="8dp"
                     android:inputType="textPassword"/>
 
+
+
                 <TextView
-                    android:id="@+id/recuperar"
+
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recuperar"
+                    android:text=""
                     android:layout_gravity="center"
-                    android:padding="15dp"
-                    android:layout_marginTop="10dp"
-                    android:text="."
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-
+                    android:paddingTop="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/red"/>
 
 
                 <Button

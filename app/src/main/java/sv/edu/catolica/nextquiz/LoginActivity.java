@@ -3,6 +3,8 @@ package sv.edu.catolica.nextquiz;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,9 +40,8 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }else{
-                        Toast.makeText(LoginActivity.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
                         binding.recuperar.setText("Recuperar Contraseña");
-                        binding.recuperar.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.red));
+                        Toast.makeText(LoginActivity.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
 
                         binding.recuperar.setOnClickListener(new View.OnClickListener() {
                             @Override
