@@ -165,38 +165,94 @@ public class ResultadoActivity extends AppCompatActivity {
                 case "Questionario2":
                     if (totalscore >= 10 && totalscore <= 13) {
                         // Cargar la imagen desde el código
-                        drawable = getResources().getDrawable(R.drawable.p1);
+                        drawable = getResources().getDrawable(R.drawable.unicornio_salvaje);
                         imagen.setImageDrawable(drawable);
-                        Drawable drawable2 = getResources().getDrawable(R.drawable.p1);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.unicornio_salvaje);
                         imagen2.setImageDrawable(drawable2);
 
                         //guardar la imagen
                         valorImg = 1;
                     } else if (totalscore >= 14 && totalscore <= 16) {
                         // Cargar la imagen desde el código
-                        drawable = getResources().getDrawable(R.drawable.p2);
+                        drawable = getResources().getDrawable(R.drawable.gatocornio);
                         imagen.setImageDrawable(drawable);
-                        Drawable drawable2 = getResources().getDrawable(R.drawable.p2);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.gatocornio);
                         imagen2.setImageDrawable(drawable2);
 
                         //guardar la imagen
                         valorImg = 2;
                     } else if (totalscore >= 17 && totalscore <= 19) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.pandicornio);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.pandicornio);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 3;
                     } else if (totalscore >= 20 && totalscore <= 22) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.puercornio);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.puercornio);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 4;
                     } else if (totalscore >= 23 && totalscore <= 25) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_bebe);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.unicornio_bebe);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 5;
                     } else if (totalscore >= 26 && totalscore <= 28) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_estelar);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.unicornio_estelar);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 6;
                     } else if (totalscore >= 29 && totalscore <= 32) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_salvaje);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.unicornio_salvaje);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 7;
                     } else if (totalscore >= 33 && totalscore <= 35) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.pandicornio);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.pandicornio);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 8;
                     } else if (totalscore >= 36 && totalscore <= 38) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_bebe);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.unicornio_bebe);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 9;
                     } else if (totalscore >= 39 && totalscore <= 40) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.gatocornio);
+                        imagen.setImageDrawable(drawable);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.gatocornio);
+                        imagen2.setImageDrawable(drawable2);
+
+                        //guardar la imagen
+                        valorImg = 10;
                     } else {
                         System.out.println("Respuesta fuera de rangos");
                     }
@@ -367,27 +423,27 @@ public class ResultadoActivity extends AppCompatActivity {
                         valorImg = 7;
                     } else if (totalscore >= 33 && totalscore <= 35) {
                         // Cargar la imagen desde el código
-                        drawable = getResources().getDrawable(R.drawable.c8);
+                        drawable = getResources().getDrawable(R.drawable.c1);
                         imagen.setImageDrawable(drawable);
-                        Drawable drawable2 = getResources().getDrawable(R.drawable.c8);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c1);
                         imagen2.setImageDrawable(drawable2);
 
                         //guardar la imagen
                         valorImg = 8;
                     } else if (totalscore >= 36 && totalscore <= 38) {
                         // Cargar la imagen desde el código
-                        drawable = getResources().getDrawable(R.drawable.c9);
+                        drawable = getResources().getDrawable(R.drawable.c2);
                         imagen.setImageDrawable(drawable);
-                        Drawable drawable2 = getResources().getDrawable(R.drawable.c9);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c2);
                         imagen2.setImageDrawable(drawable2);
 
                         //guardar la imagen
                         valorImg = 9;
                     } else if (totalscore >= 39 && totalscore <= 40) {
                         // Cargar la imagen desde el código
-                        drawable = getResources().getDrawable(R.drawable.c10);
+                        drawable = getResources().getDrawable(R.drawable.c3);
                         imagen.setImageDrawable(drawable);
-                        Drawable drawable2 = getResources().getDrawable(R.drawable.c10);
+                        Drawable drawable2 = getResources().getDrawable(R.drawable.c3);
                         imagen2.setImageDrawable(drawable2);
 
                         //guardar la imagen

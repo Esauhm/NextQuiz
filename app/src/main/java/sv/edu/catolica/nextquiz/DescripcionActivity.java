@@ -123,26 +123,77 @@ public class DescripcionActivity extends AppCompatActivity {
                 case "Questionario2":
                     if (Vimagen == 1) {
                         // Cargar la imagen desde el código
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        drawable = getResources().getDrawable(R.drawable.unicornio_salvaje);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("Unicornio Salvaje");
+                        descrpicion.setText("¡Enhorabuena! Si obtuviste el resultado del unicornio salvaje en este test, eso significa que eres tan mágico y único como una mezcla de arcoíris y purpurina. Eres como el unicornio salvaje de las fiestas, siempre listo/a para animar el ambiente y llenar de alegría cualquier situación.");
 
                     } else if (Vimagen == 2) {
-                        //imagen =
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.gatocornio);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("GatoCornio");
+                        descrpicion.setText("Como gaticornio, eres curioso y juguetón, siempre explorando nuevos lugares y descubriendo cosas fascinantes. Tu pelaje suave y tus ojos brillantes capturan la atención de todos a tu alrededor, y tu cuerno mágico te otorga un toque de encanto adicional.\n");
                     } else if (Vimagen == 3) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.pandicornio);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("PandiCornio");
+                        descrpicion.setText("Eres alguien cálido, amable y lleno de amor para compartir con los demás. Tu presencia es como un bálsamo para aquellos que te rodean, ya que contagias felicidad y generosidad. ");
                     } else if (Vimagen == 4) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.puercornio);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("PuerCornio");
+                        descrpicion.setText("Como puercornio, eres juguetón y travieso, siempre dispuesto a explorar nuevos lugares y probar nuevas experiencias. Tu aspecto encantador de cerdito y tu cuerno mágico te distinguen y te hacen destacar entre los demás.\n");
                     } else if (Vimagen == 5) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_bebe);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("Unicornio bebé");
+                        descrpicion.setText("¡Oh, qué adorabilidad pura! Si obtuviste como resultado un unicornio bebé, ¡felicidades! Eres una persona llena de inocencia, ternura y una gran imaginación. Tu unicornio bebé es juguetón, curioso y siempre está buscando nuevas aventuras.");
                     } else if (Vimagen == 6) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_estelar);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("Unicornio Estelar");
+                        descrpicion.setText("¡Felicitaciones, eres un unicornio estelar! ¡Eso significa que tienes un brillo interior tan deslumbrante que podrías hacer que las constelaciones se pongan celosas! Tu pelaje violeta brillante y tus poderes mágicos te convierten en el centro de atención en todas las fiestas cósmicas.");
+
                     } else if (Vimagen == 7) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_salvaje);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("Unicornio Salvaje");
+                        descrpicion.setText("¡Enhorabuena! Si obtuviste el resultado del unicornio salvaje en este test, eso significa que eres tan mágico y único como una mezcla de arcoíris y purpurina. Eres como el unicornio salvaje de las fiestas, siempre listo/a para animar el ambiente y llenar de alegría cualquier situación.");
+
                     } else if (Vimagen == 8) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.pandicornio);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("PandiCornio");
+                        descrpicion.setText("Eres alguien cálido, amable y lleno de amor para compartir con los demás. Tu presencia es como un bálsamo para aquellos que te rodean, ya que contagias felicidad y generosidad. ");
                     } else if (Vimagen == 9) {
-                        System.out.println("Respuesta dentro del rango 7-9");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.unicornio_bebe);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("Unicornio bebé");
+                        descrpicion.setText("¡Oh, qué adorabilidad pura! Si obtuviste como resultado un unicornio bebé, ¡felicidades! Eres una persona llena de inocencia, ternura y una gran imaginación. Tu unicornio bebé es juguetón, curioso y siempre está buscando nuevas aventuras.");
                     } else if (Vimagen == 10) {
-                        System.out.println("Respuesta dentro del rango 4-6");
+                        // Cargar la imagen desde el código
+                        drawable = getResources().getDrawable(R.drawable.gatocornio);
+                        imagen.setImageDrawable(drawable);
+
+                        nombre.setText("GatoCornio");
+                        descrpicion.setText("Como gaticornio, eres curioso y juguetón, siempre explorando nuevos lugares y descubriendo cosas fascinantes. Tu pelaje suave y tus ojos brillantes capturan la atención de todos a tu alrededor, y tu cuerno mágico te otorga un toque de encanto adicional.\n");
                     } else {
                         System.out.println("Respuesta fuera de rango");
                     }
