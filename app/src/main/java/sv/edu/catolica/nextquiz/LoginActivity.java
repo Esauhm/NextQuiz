@@ -1,6 +1,7 @@
 package sv.edu.catolica.nextquiz;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -38,6 +39,16 @@ public class LoginActivity extends AppCompatActivity {
                         finish();
                     }else{
                         Toast.makeText(LoginActivity.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
+                        binding.recuperar.setText("Recuperar Contraseña");
+                        binding.recuperar.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.red));
+
+                        binding.recuperar.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(LoginActivity.this, RecuperarActivity.class);
+                                startActivity(intent);
+                            }
+                        });
                     }
                 }
             }

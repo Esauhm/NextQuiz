@@ -19,7 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create Table allusers(email TEXT Primary Key, password TEXT)");
+        db.execSQL("create Table allusers(email TEXT Primary Key, password TEXT, palabra TEXT)");
     }
 
     @Override
@@ -27,11 +27,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("drop Table if exists allusers");
     }
 
-    public Boolean insertData(String email, String password){
+    public Boolean insertData(String email, String password, String palabra){
         SQLiteDatabase MyDatabase = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
         contentValues.put("password", password);
+        contentValues.put("palabra", palabra);
         long result = MyDatabase.insert("allusers", null, contentValues);
 
         if(result == -1){
@@ -62,6 +63,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } else {
             return  false;
         }
+    }
+
+
+    public String checkPalabraCorreo(String email, String palabra){
+        SQLiteDatabase MyDatabase = this.getWritableDatabase();
+        Cursor cursor = MyDatabase.rawQuery("SELECT password FROM allusers WHERE email = ? AND palabra = ?", new String[]{email, palabra});
+
+        String password = "";
+
+        if (cursor.moveToFirst()) {
+            password = cursor.getString(0);
+        }
+
+        return password;
     }
 
 }

@@ -35,16 +35,17 @@ public class sigupActivity extends AppCompatActivity {
                 String email = binding.sgEmail.getText().toString();
                 String password = binding.sgPassword.getText().toString();
                 String confirmPassword = binding.sgConfirm.getText().toString();
+                String palabra = binding.sgPalabra.getText().toString();
                 Matcher matcher = pattern.matcher(email);
 
                 if (matcher.matches()) {
-                    if(email.equals("")||password.equals("")||confirmPassword.equals(""))
+                    if(email.equals("")||password.equals("")||confirmPassword.equals("")||palabra.equals(""))
                         Toast.makeText(sigupActivity.this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
                     else{
                         if(password.equals(confirmPassword)){
                             Boolean checkUserEmail = databaseHelper.checkEmail(email);
                             if(checkUserEmail == false){
-                                Boolean insert = databaseHelper.insertData(email, password);
+                                Boolean insert = databaseHelper.insertData(email, password, palabra);
                                 if(insert == true){
                                     Toast.makeText(sigupActivity.this, "¡Sesión iniciada correctamente!", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(),LoginActivity.class);

@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.animation.Animator;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -235,9 +237,6 @@ public class PreguntaActivity extends AppCompatActivity {
     private Button botonSeleccionado;
     private int RevisarRespuesta(Button opcionSeleccionada) {
         int puntos=0;
-        if(timer != null){
-            timer.cancel();
-        }
 
 
         if (botonSeleccionado != null && botonSeleccionado != opcionSeleccionada) {
@@ -322,5 +321,29 @@ public class PreguntaActivity extends AppCompatActivity {
         list.add(new QuestionModel("¿Cuál es tu plato principal favorito?", "a) Filete de carne", "b) Salmón a la parrilla", "c) Pollo al horno", "d) Ensalada mixta"));
         list.add(new QuestionModel("¿Qué tipo de postre te gusta más?", "a) Pastel de chocolate", "b) Helado", "c) Flan", "d) Frutas frescas"));
         list.add(new QuestionModel("¿Qué ingredientes no pueden faltar en tu comida favorita?", "a) Queso", "b) Tomate", "c) Aguacate", "d) Cebolla"));
+    }
+
+
+
+
+    @Override
+    public void onBackPressed() {
+        // Mostrar un diálogo de confirmación antes de cerrar la actividad
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirmación");
+        builder.setMessage("¿Estás seguro de que deseas salir?");
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                timer.cancel();
+
+                Intent intent = new Intent(PreguntaActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        builder.setNegativeButton("No", null);
+        builder.show();
     }
 }

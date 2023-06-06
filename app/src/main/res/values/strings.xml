@@ -24,4 +24,5 @@
     <string name="text_frutas">Quiz de Frutas:</string>
     <string name="text_aninales">Quiz de Animales:</string>
     <string name="descricion_animales">En este Quiz podrás responder preguntas divertidas y saber que tipo de animal eres, podrías ser un perrito o un gato, no lo sabrás hasta jugarlo, continua jugando en nextQuiz.</string>
+    <string name="palabra_clave">palabra Clave</string>
 </resources>
