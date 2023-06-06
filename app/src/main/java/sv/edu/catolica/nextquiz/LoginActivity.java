@@ -3,6 +3,7 @@ package sv.edu.catolica.nextquiz;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -30,16 +31,23 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = binding.lgEmail.getText().toString();
                 String password = binding.lgPassword.getText().toString();
-                if(email.equals("")||password.equals(""))
+
+                if (email.equals("") || password.equals("")) {
                     Toast.makeText(LoginActivity.this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
-                else{
+                } else {
                     Boolean checkCredentials = databaseHelper.checkEmailPassword(email, password);
-                    if(checkCredentials == true){
+                    if (checkCredentials) {
+                        // Guardar el correo electrónico del usuario en SharedPreferences
+                        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("email", email);
+                        editor.apply();
+
                         Toast.makeText(LoginActivity.this, "¡Inicio de sesión correcto!", Toast.LENGTH_SHORT).show();
-                        Intent intent  = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         finish();
-                    }else{
+                    } else {
                         binding.recuperar.setText("Recuperar Contraseña");
                         Toast.makeText(LoginActivity.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
 
@@ -52,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                         });
                     }
                 }
+
             }
         });
         binding.sigupRedirect.setOnClickListener(new View.OnClickListener() {

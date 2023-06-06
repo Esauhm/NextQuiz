@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,28 +8,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="176dp"
-        android:orientation="vertical"
-        android:gravity="bottom"
-        android:padding="16dp"
+        android:layout_height="197dp"
         android:background="@drawable/header"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-
-        <ImageView
+        <androidx.cardview.widget.CardView
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/nextquiz1"
-            />
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="20sp"
+            app:cardCornerRadius="75dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/conejo" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="texto"
-            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:layout_marginBottom="16dp"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -93,6 +100,26 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/perfil"
+        android:paddingTop="15dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lavender"
+            android:text="Configuración"
+            android:textSize="20sp"
+           android:drawableLeft="@drawable/herramienta"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
 
 
     <View
@@ -116,7 +143,7 @@
             android:text="@string/txt_cerrar_sesion"
             android:paddingTop="15dp"
             android:textSize="20sp"
-            android:drawableLeft="@drawable/herramienta"
+            android:drawableLeft="@drawable/csesion"
             android:drawablePadding="8dp"/>
 
     </LinearLayout>

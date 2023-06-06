@@ -18,7 +18,7 @@ public class settingsActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, nosotros, nuevos, logout;
+    LinearLayout home, nosotros, nuevos, logout, perfil;
 
 
     @Override
@@ -31,6 +31,7 @@ public class settingsActivity extends AppCompatActivity {
         home = findViewById(R.id.home);
         nosotros = findViewById(R.id.nosotros);
         nuevos = findViewById(R.id.nuevos);
+        perfil = findViewById(R.id.perfil);
         logout = findViewById(R.id.logOut);
 
         menu.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +51,15 @@ public class settingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 recreate();
+            }
+        });
+
+        perfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                redirectActivity(settingsActivity.this, perfilActivity.class);
+
             }
         });
 

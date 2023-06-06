@@ -18,7 +18,7 @@ public class nuevosActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, nosotros, nuevos, logout;
+    LinearLayout home, nosotros, nuevos, logout,perfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class nuevosActivity extends AppCompatActivity {
         nosotros = findViewById(R.id.nosotros);
         nuevos = findViewById(R.id.nuevos);
         logout = findViewById(R.id.logOut);
+        perfil = findViewById(R.id.perfil);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +53,13 @@ public class nuevosActivity extends AppCompatActivity {
                 redirectActivity(nuevosActivity.this, settingsActivity.class);
             }
         });
+        perfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(nuevosActivity.this, perfilActivity.class);
 
+            }
+        });
         nuevos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
