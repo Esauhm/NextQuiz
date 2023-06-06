@@ -119,6 +119,28 @@
             android:drawablePadding="8dp"/>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/darkmode"
+        android:paddingTop="15dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lavender"
+            android:text="Dark mode"
+            android:textSize="20sp"
+            android:drawablePadding="8dp"/>
+        <Switch
+            android:id="@+id/switcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+         </LinearLayout>
 
 
 
