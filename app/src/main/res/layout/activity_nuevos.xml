@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
+    style="@style/NaiBG"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -56,6 +57,7 @@
 
 
                     <TextView
+                        style="@style/Nai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/quiz_panes"
@@ -63,6 +65,7 @@
                         android:layout_marginTop="8dp" />
 
                     <TextView
+                        style="@style/Nai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/descripcion_panes"
@@ -81,6 +84,7 @@
                         android:contentDescription="@string/nextt_frutas" />
 
                     <TextView
+                        style="@style/Nai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text_frutas"
@@ -88,6 +92,7 @@
                         android:layout_marginTop="8dp" />
 
                     <TextView
+                        style="@style/Nai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/next_frutas"
@@ -106,6 +111,7 @@
                         android:contentDescription="@string/next_aniamales" />
 
                     <TextView
+                        style="@style/Nai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text_aninales"
@@ -113,6 +119,7 @@
                         android:layout_marginTop="8dp" />
 
                     <TextView
+                        style="@style/Nai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/descricion_animales"

@@ -19,6 +19,7 @@
 
 
         <LinearLayout
+            android:background="#494973"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -31,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="Sobre Nosotros"
-                android:textColor="@color/lavender"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="36sp"/>
 
@@ -39,7 +40,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/nextquiz1"
+                android:src="@drawable/nq"
                 android:gravity="center"/>
 
             <TextView
@@ -49,7 +50,7 @@
                 android:text="NextQuiz"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="#EBE1F1"
                 android:paddingTop="16dp" />
 
             <TextView
@@ -66,7 +67,7 @@
                  emocionante y educativa mientras te diviertes
                  respondiendo preguntas sobre diversos temas.
                     En NextQuiz, nos apasiona el aprendizaje interactivo y divertido. Nuestro objetivo es brindarte una experiencia de juego excepcional mientras expandes tus conocimientos y descubres aspectos interesantes sobre ti mismo. ¡Únete a la comunidad de NextQuiz y comienza la aventura de la exploración del conocimiento hoy mismo!"
-                android:textColor="#000000"
+                android:textColor="#EBE1F1"
                 android:textSize="16sp" />
 
 

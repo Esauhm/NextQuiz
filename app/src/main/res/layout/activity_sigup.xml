@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#131D26"
     android:orientation="vertical"
     tools:context=".sigupActivity">
 
@@ -32,6 +32,7 @@
             android:padding="15dp">
 
             <EditText
+                style="@style/Nai"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/sg_email"
@@ -47,6 +48,7 @@
                 android:drawablePadding="8dp"/>
 
             <EditText
+                style="@style/Nai"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/sg_password"
@@ -61,6 +63,7 @@
                 android:drawablePadding="8dp"/>
 
             <EditText
+                style="@style/Nai"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/sg_confirm"
@@ -75,6 +78,7 @@
                 android:drawablePadding="8dp"/>
 
             <EditText
+                style="@style/Nai"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/sg_palabra"
@@ -100,6 +104,7 @@
                 />
 
             <TextView
+                style="@style/Nai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/loginRedirect"

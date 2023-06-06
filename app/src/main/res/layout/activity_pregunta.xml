@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/lLprincipal"
     android:orientation="vertical"
-    android:background="#DDD8D8"
+    style="@style/NaiBG"
     tools:context=".PreguntaActivity">
 
     <LinearLayout
@@ -33,6 +33,7 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/cardviewtxt"
                 android:id="@+id/timer"
                 android:layout_width="217dp"
                 android:layout_height="wrap_content"
@@ -41,6 +42,7 @@
                 android:textSize="20sp" />
 
             <TextView
+                style="@style/cardviewtxt"
                 android:id="@+id/totalQuestion"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -59,6 +61,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        style="@style/cardview"
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="130dp"
@@ -73,6 +76,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            style="@style/cardviewtxt"
             android:id="@+id/question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,6 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <androidx.appcompat.widget.AppCompatButton
+            style="@style/cardviewtxt"
             android:id="@+id/opcion4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -113,6 +118,7 @@
             app:layout_constraintTop_toBottomOf="@+id/opcion3" />
 
         <androidx.appcompat.widget.AppCompatButton
+            style="@style/cardviewtxt"
             android:id="@+id/opcion3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -128,6 +134,7 @@
             app:layout_constraintTop_toBottomOf="@+id/opcion2" />
 
         <androidx.appcompat.widget.AppCompatButton
+            style="@style/cardviewtxt"
             android:id="@+id/opcion2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -143,6 +150,7 @@
             app:layout_constraintTop_toBottomOf="@+id/opcion1" />
 
         <androidx.appcompat.widget.AppCompatButton
+            style="@style/cardviewtxt"
             android:id="@+id/opcion1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -160,6 +168,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        style="@style/btn"
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

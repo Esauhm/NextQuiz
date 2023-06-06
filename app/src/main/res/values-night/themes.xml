@@ -19,4 +19,8 @@
     <style name="cardviewtxt">
         <item name="android:textColor">@color/white</item>
     </style>
+    <style name="btn">
+        <item name="android:background">#4C4A50</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

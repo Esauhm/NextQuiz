@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
+    android:background="#131D26"
     tools:context=".LoginActivity">
 
     <ScrollView
@@ -37,6 +37,7 @@
                 android:padding="15dp">
 
                 <EditText
+                    style="@style/Nai"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:id="@+id/lg_email"
@@ -48,6 +49,7 @@
                     android:drawablePadding="8dp"/>
 
                 <EditText
+                    style="@style/Nai"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:id="@+id/lg_password"
