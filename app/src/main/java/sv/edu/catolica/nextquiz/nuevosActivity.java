@@ -105,7 +105,6 @@ public class nuevosActivity extends AppCompatActivity {
         closeDrawer(drawerLayout);
     }
 
-
     @Override
     public void onBackPressed() {
         // Mostrar un diálogo de confirmación antes de cerrar la actividad
